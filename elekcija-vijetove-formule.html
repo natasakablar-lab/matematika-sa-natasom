@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vijetove formule</title>
+  <style>
+    body { margin: 0; background: #f4f7fa; color: #172639; font: 1.08rem/1.65 system-ui, sans-serif; }
+    main { width: min(45rem, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 3.1rem); margin: .5rem 0 1rem; letter-spacing: -.035em; }
+    h2 { margin-top: 2.2rem; }
+    h3 { font-size: 1.1rem; margin: 0 0 .65rem; }
+    p { margin: .55rem 0; }
+    .meta { color: #39556e; font-size: .95rem; }
+    .card, details { background: #fff; border: 1px solid #d3dfea; border-radius: .7rem; padding: 1rem 1.15rem; margin: .75rem 0; }
+    .formula { font-family: Georgia, serif; font-size: 1.22em; }
+    .math { white-space: nowrap; }
+    li { margin: .4rem 0; }
+    .practice { padding-left: 1.65rem; }
+    .practice li { padding: .35rem .35rem .35rem .25rem; border-bottom: 1px solid #d3dfea; }
+    summary { cursor: pointer; font-weight: 700; color: #075265; }
+    summary:focus-visible { outline: 2px solid #075265; outline-offset: 4px; }
+    @media print { body { background: white; } main { padding: 0; width: 100%; } .card { break-inside: avoid; } }
+  
+</style>
+</head>
+<body>
+<main>
+  <article>
+    <p><a href="index.html">Sve eLekcije</a></p>
+    <header>
+      <p class="meta">Matematika · Srednja škola · Oko 20 minuta</p>
+      <h1>Vijetove formule</h1>
+      <p>Iz koeficijenata kvadratne jednačine odredi zbir i proizvod korena, pronađi drugi koren kada je prvi poznat i sastavi jednačinu sa zadatim korenima.</p>
+    </header>
+    <section aria-labelledby="postupak">
+      <h2 id="postupak">Zbir i proizvod korena</h2>
+      <p>Za jednačinu <span class="math">ax² + bx + c = 0</span>, gde je <span class="math">a ≠ 0</span> i <span class="math">D ≥ 0</span>, označi realne korene sa <span class="math">x₁</span> i <span class="math">x₂</span>. Dvostruki koren računaš dva puta.</p>
+      <p class="formula"><span class="math">S = x₁ + x₂ = −b/a</span> i <span class="math">P = x₁x₂ = c/a.</span></p>
+      <p>Formule dobijaš kada razviješ <span class="math">a(x − x₁)(x − x₂)</span> i uporediš koeficijente uz <em>x</em> i slobodni član sa polinomom <span class="math">ax² + bx + c</span>.</p>
+      <h3>Od zbira i proizvoda do jednačine</h3>
+      <p>Ako su zadati zbir <em>S</em> i proizvod <em>P</em>, napiši <span class="math">x² − Sx + P = 0</span>. Ako još treba utvrditi postoje li takvi realni brojevi, proveri da li je <span class="math">S² − 4P ≥ 0</span>.</p>
+    </section>
+    <section aria-labelledby="primeri">
+      <h2 id="primeri">Rešeni primeri</h2>
+      <div class="card"><h3>1. Zbir i proizvod bez računanja korena</h3><p class="formula">3x² − 7x + 2 = 0</p>
+    <p>D = 49 − 24 = 25, pa su koreni realni.</p><p>Za a = 3, b = −7 i c = 2 dobijaš S = 7/3 i P = 2/3.</p></div><div class="card"><h3>2. Traženje drugog korena</h3><p class="formula">x² − x − 6 = 0, uz x₁ = 3</p>
+    <p>S = 1, pa iz 3 + x₂ = 1 sledi x₂ = −2.</p><p>Provera proizvoda daje 3 · (−2) = −6.</p></div><div class="card"><h3>3. Sastavljanje jednačine</h3><p class="formula">x₁ = −2, x₂ = 5</p>
+    <p>S = −2 + 5 = 3, a P = (−2) · 5 = −10.</p><p>Jednačina sa vodećim koeficijentom 1 glasi x² − 3x − 10 = 0.</p></div>
+    </section>
+    <section aria-labelledby="vezba">
+      <h2 id="vezba">Samostalna vežba</h2>
+      <p>Reši zadatke u skupu realnih brojeva. U šestom zadatku možeš da koristiš identitet (x₁ + x₂)² = x₁² + 2x₁x₂ + x₂².</p>
+      <ol class="practice"><li>Za <span class="math">x² − 7x + 12 = 0</span> odredi zbir i proizvod korena.</li>
+<li>Za <span class="math">2x² + 3x − 2 = 0</span> odredi zbir i proizvod korena.</li>
+<li>Jedan koren jednačine <span class="math">x² − 2x − 15 = 0</span> jeste 5. Odredi drugi.</li>
+<li>Sastavi jednačinu sa vodećim koeficijentom 1 čiji su koreni −3 i 4.</li>
+<li>Jedan koren jednačine <span class="math">x² − kx + 12 = 0</span> jeste 3. Odredi <em>k</em> i drugi koren.</li>
+<li>Ako su <span class="math">x₁</span> i <span class="math">x₂</span> koreni jednačine <span class="math">x² − 5x + 3 = 0</span>, odredi <span class="math">x₁² + x₂²</span> pomoću Vijetovih formula.</li>
+<li>Postoje li dva realna broja čiji je zbir 2, a proizvod 5?</li>
+</ol>
+      <details>
+        <summary>Prikaži konačna rešenja</summary>
+        <ol><li>S = 7, P = 12.</li>
+<li>S = −3/2, P = −1.</li>
+<li>Drugi koren je −3.</li>
+<li>x² − x − 12 = 0.</li>
+<li>k = 7, drugi koren je 4.</li>
+<li>x₁² + x₂² = 19.</li>
+<li>Ne postoje takvi realni brojevi.</li>
+</ol>
+      </details>
+    </section>
+  </article>
+</main>
+</body>
+</html>

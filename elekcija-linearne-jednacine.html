@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linearne jednačine sa jednom nepoznatom | Matematika sa Natašom</title>
+  <style>
+    body { margin: 0; background: #f4f7fa; color: #172639; font: 1.08rem/1.65 system-ui, sans-serif; }
+    main { width: min(45rem, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 3.1rem); margin: .5rem 0 1rem; letter-spacing: -.035em; }
+    h2 { margin-top: 2.2rem; }
+    h3 { font-size: 1.1rem; margin: 0 0 .65rem; }
+    p { margin: .55rem 0; }
+    .meta { color: #39556e; font-size: .95rem; }
+    .card, details { background: #fff; border: 1px solid #d3dfea; border-radius: .7rem; padding: 1rem 1.15rem; margin: .75rem 0; }
+    .formula { font-family: Georgia, serif; font-size: 1.22em; }
+    .math { white-space: nowrap; }
+    li { margin: .4rem 0; }
+    .practice { padding-left: 1.65rem; }
+    .practice li { padding: .35rem .35rem .35rem .25rem; border-bottom: 1px solid #d3dfea; }
+    summary { cursor: pointer; font-weight: 700; color: #075265; }
+    summary:focus-visible { outline: 2px solid #075265; outline-offset: 4px; }
+    @media print { body { background: white; } main { padding: 0; width: 100%; } .card { break-inside: avoid; } }
+  
+
+    .plot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: .6rem; }
+    .plot-grid figure { margin: 0; padding: .75rem; }
+    .plot-grid img { display: block; width: 100%; height: auto; }
+    figcaption { font-size: .95rem; }
+    .system { display: inline-grid; vertical-align: middle; border-left: 2px solid #39556e; padding-left: .5em; line-height: 1.4; }
+    .practice p { margin: 0; }
+</style>
+</head>
+<body><main><article>
+  <p><a href="index.html">Sve eLekcije</a></p>
+  <header>
+    <p class="meta">Matematika · 8. razred osnovne škole</p>
+    <h1>Linearne jednačine sa jednom nepoznatom</h1>
+    <p>Nauči da središ jednačinu, odrediš njen skup rešenja i proveriš rezultat u početnoj jednačini.</p>
+  </header>
+  <section aria-labelledby="postupak">
+    <h2 id="postupak">Kako se rešava jednačina</h2>
+    <p>Rešenje je broj koji po zameni za <em>x</em> daje istu vrednost na obe strane jednačine.</p>
+    <ol>
+      <li><strong>Ukloni razlomke i zagrade.</strong> Ako su imenioci brojevi, pomnoži svaki član na obe strane njihovim zajedničkim sadržaocem, pa razvij zagrade.</li>
+      <li><strong>Sakupi članove.</strong> Dodaj ili oduzmi isti izraz na obe strane da bi dobila oblik <span class="math">ax = b</span>.</li>
+      <li><strong>Odredi skup rešenja.</strong> Ako je <span class="math">a ≠ 0</span>, podeli obe strane sa <em>a</em> i dobijaš <span class="math">x = b/a</span>. Ako je <span class="math">a = 0</span>, jednakost <span class="math">0 = 0</span> važi za svaki realan broj, dok jednakost <span class="math">0 = b</span> za <span class="math">b ≠ 0</span> nema rešenja.</li>
+      <li><strong>Proveri rezultat.</strong> Uvrsti dobijenu vrednost u početnu jednačinu.</li>
+    </ol></section>
+  <section aria-labelledby="primeri">
+    <h2 id="primeri">Rešeni primeri</h2>
+    <div class="card"><h3>Zagrade i nepoznata na obe strane</h3><p class="formula">3(x − 2) = x + 8</p><p>Razvij zagradu i dobijaš 3x − 6 = x + 8.</p><p>Oduzmi x i dodaj 6 na obe strane. Dobijaš 2x = 14, pa je x = 7.</p><p>Provera daje 3(7 − 2) = 15 i 7 + 8 = 15.</p></div><div class="card"><h3>Jednačina sa razlomcima</h3><p class="formula">x/2 − (x − 3)/4 = 2</p><p>Pomnoži sve članove sa 4. Dobijaš 2x − (x − 3) = 8.</p><p>Vodi računa o znaku ispred zagrade. Sledi 2x − x + 3 = 8, pa je x = 5.</p><p>Provera daje 5/2 − 2/4 = 2.</p></div><div class="card"><h3>Kada se nepoznata poništi</h3><p class="formula">2(x + 3) = 2x + 6</p><p>Kada razviješ zagradu i oduzmeš 2x, ostaje 6 = 6. Rešenje je svaki realan broj.</p><p>U jednačini 2(x + 3) = 2x + 8 istim postupkom dobijaš 6 = 8. Tu nema rešenja.</p></div>
+  </section>
+  
+  <section aria-labelledby="vezba">
+    <h2 id="vezba">Samostalna vežba</h2>
+    <p>Reši zadatke u skupu realnih brojeva. Konačne odgovore otvori posle pokušaja.</p>
+    <ol class="practice"><li>4x − 7 = 13</li>
+<li>3x + 8 = 5x − 4</li>
+<li>2(3x − 1) = 4x + 6</li>
+<li>x/3 + (x − 2)/2 = 2</li>
+<li>5(x − 1) = 5x + 2</li>
+<li>3(x + 2) = 3x + 6</li>
+<li>Zbir broja i njegovog trostrukog iznosa je 48. Odredi taj broj.</li>
+</ol>
+    <details><summary>Prikaži konačne odgovore</summary><ol><li>x = 5.</li>
+<li>x = 6.</li>
+<li>x = 4.</li>
+<li>x = 18/5.</li>
+<li>Nema rešenja.</li>
+<li>Rešenje je svaki realan broj.</li>
+<li>Traženi broj je 12.</li>
+</ol></details>
+  </section>
+</article></main></body>
+</html>

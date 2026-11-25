@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rešavanje sistema Kramerovim pravilom | Matematika sa Natašom</title>
+<style>
+    body { margin: 0; background: #f4f7fa; color: #172639; font: 1.08rem/1.65 system-ui, sans-serif; }
+    main { width: min(45rem, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 3.1rem); margin: .5rem 0 1rem; letter-spacing: -.035em; }
+    h2 { margin-top: 2.2rem; }
+    h3 { font-size: 1.1rem; margin: 0 0 .65rem; }
+    p { margin: .55rem 0; }
+    .meta { color: #39556e; font-size: .95rem; }
+    .card, details { background: #fff; border: 1px solid #d3dfea; border-radius: .7rem; padding: 1rem 1.15rem; margin: .75rem 0; }
+    .formula { font-family: Georgia, serif; font-size: 1.22em; }
+    .math { white-space: nowrap; }
+    li { margin: .4rem 0; }
+    .practice { padding-left: 1.65rem; }
+    .practice li { padding: .35rem .35rem .35rem .25rem; border-bottom: 1px solid #d3dfea; }
+    summary { cursor: pointer; font-weight: 700; color: #075265; }
+    summary:focus-visible { outline: 2px solid #075265; outline-offset: 4px; }
+    @media print { body { background: white; } main { padding: 0; width: 100%; } .card { break-inside: avoid; } }
+  
+
+    
+    .display { display: flex; flex-wrap: wrap; gap: .35rem .7rem; align-items: center; }
+    .det { display: inline-block; border-inline: 1.5px solid currentColor; padding-inline: .16em; vertical-align: middle; }
+    .det table { border-collapse: collapse; font-family: Georgia, serif; font-variant-numeric: tabular-nums; }
+    .det td { padding: 0 .35em; text-align: right; }
+    .replaced { background: #e4f1f3; font-weight: 700; }
+    .system { display: inline-grid; border-left: 2px solid #39556e; padding-left: .55em; line-height: 1.45; }
+    .practice li { padding: .55rem .25rem; }
+    a { color: #075265; text-underline-offset: .15em; }
+    .next { margin-top: 2rem; }
+</style>
+</head>
+<body>
+<main><article>
+<p><a href="index.html">Sve eLekcije</a></p>
+<header>
+<p class="meta">Matematika · Srednja škola</p>
+<h1>Rešavanje sistema Kramerovim pravilom</h1>
+<p>Reši sistem sa dve ili tri nepoznate pomoću determinanti i prepoznaj kada treba primeniti eliminaciju.</p>
+</header>
+
+<section aria-labelledby="pravilo">
+<h2 id="pravilo">Kramerovo pravilo</h2>
+<ol>
+<li>Zapiši nepoznate istim redosledom u svakoj jednačini. Kad neka nepoznata izostane, njen koeficijent je 0.</li>
+<li>Izračunaj determinantu matrice koeficijenata i označi je sa <em>D</em>.</li>
+<li>Za <em>D</em> različito od nule, napravi po jednu novu determinantu za svaku nepoznatu. U svakoj zameni samo kolonu te nepoznate kolonom slobodnih članova sa desne strane. Ostale kolone prepiši iz početne matrice.</li>
+<li>Podeli svaku novu determinantu sa <em>D</em>. Dobijaš <span class="math">x = D<sub>x</sub>/D</span>, <span class="math">y = D<sub>y</sub>/D</span> i, kod sistema sa tri nepoznate, <span class="math">z = D<sub>z</sub>/D</span>.</li>
+</ol>
+<p><strong>Ako je D = 0</strong>, sistem nema jedinstveno rešenje. Eliminacijom proveri da li ima beskonačno mnogo rešenja ili ih nema.</p>
+</section>
+<section aria-labelledby="primeri">
+<h2 id="primeri">Rešeni primeri</h2>
+<div class="card"><h3>Sistem sa dve nepoznate</h3>
+<p>Ovo je sistem iz lekcije o metodi suprotnih koeficijenata.</p>
+<p class="formula"><span class="system"><span>x + y = 7</span><span>x − y = 1</span></span></p>
+<p>Slobodni članovi su 7 i 1. U svakoj pomoćnoj determinanti podebljana je kolona koju oni zamenjuju.</p>
+<div class="formula display"><span>D =</span> <div class="det"><table aria-label="Determinanta, redovi: 1, 1; 1, −1"><tbody><tr><td>1</td><td>1</td></tr><tr><td>1</td><td>−1</td></tr></tbody></table></div> <span>= −2</span></div><div class="formula display"><span>D<sub>x</sub> =</span> <div class="det"><table aria-label="Determinanta, redovi: 7, 1; 1, −1"><tbody><tr><td class="replaced">7</td><td>1</td></tr><tr><td class="replaced">1</td><td>−1</td></tr></tbody></table></div> <span>= −8</span></div><div class="formula display"><span>D<sub>y</sub> =</span> <div class="det"><table aria-label="Determinanta, redovi: 1, 7; 1, 1"><tbody><tr><td>1</td><td class="replaced">7</td></tr><tr><td>1</td><td class="replaced">1</td></tr></tbody></table></div> <span>= −6</span></div>
+<p>x = −8/(−2) = 4, y = −6/(−2) = 3. Provera u početnim jednačinama daje 4 + 3 = 7 i 4 − 3 = 1.</p>
+</div>
+<div class="card"><h3>Sistem sa tri nepoznate</h3>
+<p class="formula"><span class="system"><span>x + y + z = 4</span><span>2x − y + z = 8</span><span>x + 2y − z = −3</span></span></p>
+<p>Slobodni članovi su 4, 8 i −3. Za računanje svake determinante možeš koristiti razvoj po prvom redu. Za <em>D</em> dobijaš (−1) − (−3) + 5 = 7.</p>
+<div class="formula display"><span>D =</span> <div class="det"><table aria-label="Determinanta, redovi: 1, 1, 1; 2, −1, 1; 1, 2, −1"><tbody><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>2</td><td>−1</td><td>1</td></tr><tr><td>1</td><td>2</td><td>−1</td></tr></tbody></table></div> <span>= 7</span></div><div class="formula display"><span>D<sub>x</sub> =</span> <div class="det"><table aria-label="Determinanta, redovi: 4, 1, 1; 8, −1, 1; −3, 2, −1"><tbody><tr><td class="replaced">4</td><td>1</td><td>1</td></tr><tr><td class="replaced">8</td><td>−1</td><td>1</td></tr><tr><td class="replaced">−3</td><td>2</td><td>−1</td></tr></tbody></table></div> <span>= 14</span></div><div class="formula display"><span>D<sub>y</sub> =</span> <div class="det"><table aria-label="Determinanta, redovi: 1, 4, 1; 2, 8, 1; 1, −3, −1"><tbody><tr><td>1</td><td class="replaced">4</td><td>1</td></tr><tr><td>2</td><td class="replaced">8</td><td>1</td></tr><tr><td>1</td><td class="replaced">−3</td><td>−1</td></tr></tbody></table></div> <span>= −7</span></div><div class="formula display"><span>D<sub>z</sub> =</span> <div class="det"><table aria-label="Determinanta, redovi: 1, 1, 4; 2, −1, 8; 1, 2, −3"><tbody><tr><td>1</td><td>1</td><td class="replaced">4</td></tr><tr><td>2</td><td>−1</td><td class="replaced">8</td></tr><tr><td>1</td><td>2</td><td class="replaced">−3</td></tr></tbody></table></div> <span>= 21</span></div>
+<p>x = 14/(7) = 2, y = −7/(7) = −1, z = 21/(7) = 3.</p>
+<p>Provera daje 2 − 1 + 3 = 4, 4 + 1 + 3 = 8 i 2 − 2 − 3 = −3.</p>
+</div>
+<div class="card"><h3>Primer sa D = 0</h3>
+<p class="formula"><span class="system"><span>x + y = 3</span><span>2x + 2y = 8</span></span></p>
+<p>Koeficijenti drugog reda dvostruko su veći, pa je D = 0. Kad od druge jednačine oduzmeš dvostruku prvu, dobijaš 0 = 2. Sistem nema rešenja.</p>
+</div>
+</section>
+<section aria-labelledby="vezba">
+<h2 id="vezba">Samostalna vežba</h2>
+<p>Konačne odgovore otvori posle pokušaja.</p>
+<ol class="practice"><li>Reši <span class="system"><span>2x + y = 8</span><span>x − y = 1</span></span>.</li>
+<li>Reši <span class="system"><span>3x − 2y = −11</span><span>2x + y = 2</span></span>.</li>
+<li>Reši <span class="system"><span>x + y + z = 6</span><span>x − y + z = 2</span><span>2x + y − z = 1</span></span>.</li>
+<li>Reši <span class="system"><span>2x + z = 5</span><span>x + y − z = 0</span><span>2y + z = −1</span></span>.</li>
+<li>Reši <span class="system"><span>x + 2y − z = 0</span><span>2x − y + 3z = 5</span><span>3x + y + z = 2</span></span>.</li>
+<li>Ispitaj broj rešenja sistema <span class="system"><span>x + y = 4</span><span>2x + 2y = 10</span></span>.</li>
+<li>Ispitaj broj rešenja sistema <span class="system"><span>x − y + z = 3</span><span>2x − 2y + 2z = 6</span><span>x + y + z = 5</span></span>.</li>
+</ol>
+<details><summary>Prikaži konačne odgovore</summary>
+<ol><li>(3, 2).</li>
+<li>(−1, 4).</li>
+<li>(1, 2, 3).</li>
+<li>(2, −1, 1).</li>
+<li>(−1, 2, 3).</li>
+<li>Sistem nema rešenja.</li>
+<li>Beskonačno mnogo rešenja. Važi y = 1 i x + z = 4.</li>
+</ol>
+</details>
+</section>
+<p class="next">Ponovi <a href="elekcija-determinante.html">determinante drugog i trećeg reda</a>.</p>
+</article></main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Determinante drugog i trećeg reda | Matematika sa Natašom</title>
+<style>
+    body { margin: 0; background: #f4f7fa; color: #172639; font: 1.08rem/1.65 system-ui, sans-serif; }
+    main { width: min(45rem, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 3.1rem); margin: .5rem 0 1rem; letter-spacing: -.035em; }
+    h2 { margin-top: 2.2rem; }
+    h3 { font-size: 1.1rem; margin: 0 0 .65rem; }
+    p { margin: .55rem 0; }
+    .meta { color: #39556e; font-size: .95rem; }
+    .card, details { background: #fff; border: 1px solid #d3dfea; border-radius: .7rem; padding: 1rem 1.15rem; margin: .75rem 0; }
+    .formula { font-family: Georgia, serif; font-size: 1.22em; }
+    .math { white-space: nowrap; }
+    li { margin: .4rem 0; }
+    .practice { padding-left: 1.65rem; }
+    .practice li { padding: .35rem .35rem .35rem .25rem; border-bottom: 1px solid #d3dfea; }
+    summary { cursor: pointer; font-weight: 700; color: #075265; }
+    summary:focus-visible { outline: 2px solid #075265; outline-offset: 4px; }
+    @media print { body { background: white; } main { padding: 0; width: 100%; } .card { break-inside: avoid; } }
+  
+
+    
+    .display { display: flex; flex-wrap: wrap; gap: .35rem .7rem; align-items: center; }
+    .det { display: inline-block; border-inline: 1.5px solid currentColor; padding-inline: .16em; vertical-align: middle; }
+    .det table { border-collapse: collapse; font-family: Georgia, serif; font-variant-numeric: tabular-nums; }
+    .det td { padding: 0 .35em; text-align: right; }
+    .replaced { background: #e4f1f3; font-weight: 700; }
+    .system { display: inline-grid; border-left: 2px solid #39556e; padding-left: .55em; line-height: 1.45; }
+    .practice li { padding: .55rem .25rem; }
+    a { color: #075265; text-underline-offset: .15em; }
+    .next { margin-top: 2rem; }
+</style>
+</head>
+<body>
+<main><article>
+<p><a href="index.html">Sve eLekcije</a></p>
+<header>
+<p class="meta">Matematika · Srednja škola</p>
+<h1>Determinante drugog i trećeg reda</h1>
+<p>Izračunaj determinantu reda 2 ili 3 i objasni šta njena vrednost predstavlja.</p>
+</header>
+
+<section aria-labelledby="pojam">
+<h2 id="pojam">Šta je determinanta?</h2>
+<p>Matrica je pravougaoni raspored brojeva u redovima i kolonama. Ako ima isti broj redova i kolona, zove se kvadratna matrica. <strong>Determinanta je broj koji izračunavamo iz kvadratne matrice.</strong> Oznaka det(A) znači determinanta matrice A. Red determinante govori koliko matrica ima redova i kolona.</p>
+<p>Ako kolone matrice drugog reda posmatraš kao dva vektora u ravni, apsolutna vrednost determinante daje površinu paralelograma koji oni obrazuju. Za tri vektora u prostoru daje zapreminu odgovarajućeg paralelepipeda. Nulta determinanta znači da je ta površina ili zapremina nula.</p>
+</section>
+<section aria-labelledby="drugi">
+<h2 id="drugi">Determinanta drugog reda</h2>
+<p>Pomnoži elemente glavne dijagonale, pa oduzmi proizvod elemenata druge dijagonale.</p>
+<div class="formula display"><div class="det"><table aria-label="Determinanta, redovi: a, b; c, d"><tbody><tr><td>a</td><td>b</td></tr><tr><td>c</td><td>d</td></tr></tbody></table></div> <span>= ad − bc</span></div>
+<div class="card"><h3>Primer sa negativnim brojem</h3>
+<div class="formula display"><div class="det"><table aria-label="Determinanta, redovi: 3, −2; 4, 1"><tbody><tr><td>3</td><td>−2</td></tr><tr><td>4</td><td>1</td></tr></tbody></table></div> <span>= 3 · 1 − (−2) · 4 = 11</span></div>
+</div>
+</section>
+<section aria-labelledby="treci">
+<h2 id="treci">Determinanta trećeg reda</h2>
+<p>Pri razvoju po prvom redu svaki element množiš determinantom drugog reda koja ostane kada precrtaš prvi red i kolonu tog elementa. Znakovi u prvom redu idu redom <strong>+, −, +</strong>.</p>
+<div class="formula display"><div class="det"><table aria-label="Determinanta, redovi: a, b, c; d, e, f; g, h, i"><tbody><tr><td>a</td><td>b</td><td>c</td></tr><tr><td>d</td><td>e</td><td>f</td></tr><tr><td>g</td><td>h</td><td>i</td></tr></tbody></table></div> <span>= a(ei − fh) − b(di − fg) + c(dh − eg)</span></div>
+<div class="card"><h3>Primer razvoja po prvom redu</h3>
+<div class="formula display"><div class="det"><table aria-label="Determinanta, redovi: 2, 0, 1; 3, −1, 2; 0, 4, 1"><tbody><tr><td>2</td><td>0</td><td>1</td></tr><tr><td>3</td><td>−1</td><td>2</td></tr><tr><td>0</td><td>4</td><td>1</td></tr></tbody></table></div> <span>= 2 ·</span> <div class="det"><table aria-label="Determinanta, redovi: −1, 2; 4, 1"><tbody><tr><td>−1</td><td>2</td></tr><tr><td>4</td><td>1</td></tr></tbody></table></div> <span>+ 1 ·</span> <div class="det"><table aria-label="Determinanta, redovi: 3, −1; 0, 4"><tbody><tr><td>3</td><td>−1</td></tr><tr><td>0</td><td>4</td></tr></tbody></table></div></div>
+<p>Srednji član je nula, pa ostaje 2 · (−9) + 1 · 12 = −6.</p>
+</div>
+<div class="card"><h3>Provera pre računanja</h3>
+<p>Ako je jedan red višekratnik drugog reda, determinanta je nula. Na primer, u matrici sa redovima (1, 2, 3), (2, 4, 6) i (0, 1, 1) drugi red je dva puta prvi.</p></div>
+</section>
+<section aria-labelledby="vezba">
+<h2 id="vezba">Samostalna vežba</h2>
+<p>Konačne odgovore otvori posle pokušaja.</p>
+<ol class="practice"><li>Izračunaj <div class="det"><table aria-label="Determinanta, redovi: 3, 2; 1, 4"><tbody><tr><td>3</td><td>2</td></tr><tr><td>1</td><td>4</td></tr></tbody></table></div>.</li>
+<li>Izračunaj <div class="det"><table aria-label="Determinanta, redovi: −2, 5; 3, −1"><tbody><tr><td>−2</td><td>5</td></tr><tr><td>3</td><td>−1</td></tr></tbody></table></div>.</li>
+<li>Izračunaj <div class="det"><table aria-label="Determinanta, redovi: 4, 6; 2, 3"><tbody><tr><td>4</td><td>6</td></tr><tr><td>2</td><td>3</td></tr></tbody></table></div>.</li>
+<li>Izračunaj <div class="det"><table aria-label="Determinanta, redovi: 2, 0, 0; 1, −3, 0; 4, 5, 2"><tbody><tr><td>2</td><td>0</td><td>0</td></tr><tr><td>1</td><td>−3</td><td>0</td></tr><tr><td>4</td><td>5</td><td>2</td></tr></tbody></table></div>.</li>
+<li>Izračunaj <div class="det"><table aria-label="Determinanta, redovi: 1, 2, 0; 3, −1, 4; 2, 0, 1"><tbody><tr><td>1</td><td>2</td><td>0</td></tr><tr><td>3</td><td>−1</td><td>4</td></tr><tr><td>2</td><td>0</td><td>1</td></tr></tbody></table></div>.</li>
+<li>Izračunaj <div class="det"><table aria-label="Determinanta, redovi: 2, 1, 3; 1, 0, 2; 3, −1, 1"><tbody><tr><td>2</td><td>1</td><td>3</td></tr><tr><td>1</td><td>0</td><td>2</td></tr><tr><td>3</td><td>−1</td><td>1</td></tr></tbody></table></div>.</li>
+<li>Za koje k je <div class="det"><table aria-label="Determinanta, redovi: k, 2; 3, 6"><tbody><tr><td>k</td><td>2</td></tr><tr><td>3</td><td>6</td></tr></tbody></table></div> jednaka nuli?</li>
+</ol>
+<details><summary>Prikaži konačne odgovore</summary>
+<ol><li>10</li>
+<li>−13</li>
+<li>0</li>
+<li>−12</li>
+<li>9</li>
+<li>6</li>
+<li>k = 1.</li>
+</ol>
+</details>
+</section>
+<p class="next">Sledeća lekcija <a href="elekcija-kramerovo-pravilo.html">Rešavanje sistema Kramerovim pravilom</a>.</p>
+</article></main>
+</body>
+</html>

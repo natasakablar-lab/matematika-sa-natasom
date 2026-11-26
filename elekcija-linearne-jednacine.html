@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="sr-Latn">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Linearne jednačine sa jednom nepoznatom | Matematika sa Natašom</title>
-  <style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linearne jednačine sa jednom nepoznatom | Matematika sa Natašom</title>
+<style>
     body { margin: 0; background: #f4f7fa; color: #172639; font: 1.08rem/1.65 system-ui, sans-serif; }
     main { width: min(45rem, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 3rem; }
     h1, h2, h3 { line-height: 1.2; }
@@ -30,48 +30,114 @@
     figcaption { font-size: .95rem; }
     .system { display: inline-grid; vertical-align: middle; border-left: 2px solid #39556e; padding-left: .5em; line-height: 1.4; }
     .practice p { margin: 0; }
+
+    .toc { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin: 1rem 0; }
+    a { color: #075265; text-underline-offset: .15em; }
+    nav a:focus-visible { outline: 2px solid #075265; outline-offset: 3px; }
+    .formula { overflow-wrap: anywhere; }
+    .math { white-space: normal; }
+    .table-scroll { overflow-x: auto; }
+    .rules { border-collapse: collapse; width: 100%; }
+    .rules th, .rules td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid #d3dfea; vertical-align: top; }
+    .rules thead th { background: #e5eff5; }
+    figure.plot { margin: .9rem 0; }
+    .plot img { display: block; width: min(100%, 34rem); margin: auto; height: auto; }
+    figcaption { font-size: .94rem; }
 </style>
 </head>
-<body><main><article>
-  <p><a href="index.html">Sve eLekcije</a></p>
-  <header>
-    <p class="meta">Matematika · 8. razred osnovne škole</p>
-    <h1>Linearne jednačine sa jednom nepoznatom</h1>
-    <p>Nauči da središ jednačinu, odrediš njen skup rešenja i proveriš rezultat u početnoj jednačini.</p>
-  </header>
-  <section aria-labelledby="postupak">
-    <h2 id="postupak">Kako se rešava jednačina</h2>
-    <p>Rešenje je broj koji po zameni za <em>x</em> daje istu vrednost na obe strane jednačine.</p>
-    <ol>
-      <li><strong>Ukloni razlomke i zagrade.</strong> Ako su imenioci brojevi, pomnoži svaki član na obe strane njihovim zajedničkim sadržaocem, pa razvij zagrade.</li>
-      <li><strong>Sakupi članove.</strong> Dodaj ili oduzmi isti izraz na obe strane da bi dobila oblik <span class="math">ax = b</span>.</li>
-      <li><strong>Odredi skup rešenja.</strong> Ako je <span class="math">a ≠ 0</span>, podeli obe strane sa <em>a</em> i dobijaš <span class="math">x = b/a</span>. Ako je <span class="math">a = 0</span>, jednakost <span class="math">0 = 0</span> važi za svaki realan broj, dok jednakost <span class="math">0 = b</span> za <span class="math">b ≠ 0</span> nema rešenja.</li>
-      <li><strong>Proveri rezultat.</strong> Uvrsti dobijenu vrednost u početnu jednačinu.</li>
-    </ol></section>
-  <section aria-labelledby="primeri">
-    <h2 id="primeri">Rešeni primeri</h2>
-    <div class="card"><h3>Zagrade i nepoznata na obe strane</h3><p class="formula">3(x − 2) = x + 8</p><p>Razvij zagradu i dobijaš 3x − 6 = x + 8.</p><p>Oduzmi x i dodaj 6 na obe strane. Dobijaš 2x = 14, pa je x = 7.</p><p>Provera daje 3(7 − 2) = 15 i 7 + 8 = 15.</p></div><div class="card"><h3>Jednačina sa razlomcima</h3><p class="formula">x/2 − (x − 3)/4 = 2</p><p>Pomnoži sve članove sa 4. Dobijaš 2x − (x − 3) = 8.</p><p>Vodi računa o znaku ispred zagrade. Sledi 2x − x + 3 = 8, pa je x = 5.</p><p>Provera daje 5/2 − 2/4 = 2.</p></div><div class="card"><h3>Kada se nepoznata poništi</h3><p class="formula">2(x + 3) = 2x + 6</p><p>Kada razviješ zagradu i oduzmeš 2x, ostaje 6 = 6. Rešenje je svaki realan broj.</p><p>U jednačini 2(x + 3) = 2x + 8 istim postupkom dobijaš 6 = 8. Tu nema rešenja.</p></div>
-  </section>
-  
-  <section aria-labelledby="vezba">
-    <h2 id="vezba">Samostalna vežba</h2>
-    <p>Reši zadatke u skupu realnih brojeva. Konačne odgovore otvori posle pokušaja.</p>
-    <ol class="practice"><li>4x − 7 = 13</li>
-<li>3x + 8 = 5x − 4</li>
-<li>2(3x − 1) = 4x + 6</li>
-<li>x/3 + (x − 2)/2 = 2</li>
-<li>5(x − 1) = 5x + 2</li>
-<li>3(x + 2) = 3x + 6</li>
-<li>Zbir broja i njegovog trostrukog iznosa je 48. Odredi taj broj.</li>
-</ol>
-    <details><summary>Prikaži konačne odgovore</summary><ol><li>x = 5.</li>
-<li>x = 6.</li>
-<li>x = 4.</li>
-<li>x = 18/5.</li>
-<li>Nema rešenja.</li>
-<li>Rešenje je svaki realan broj.</li>
-<li>Traženi broj je 12.</li>
-</ol></details>
-  </section>
-</article></main></body>
-</html>
+<body>
+<main><article>
+<p><a href="index.html">Sve eLekcije</a></p>
+<header>
+<p class="meta">Matematika · 8. razred osnovne škole</p>
+<h1>Linearne jednačine sa jednom nepoznatom</h1>
+<p>Nauči šta znači rešiti jednačinu, kako da sačuvaš njen skup rešenja pri svakom koraku i kako da pomoću jednačine rešiš tekstualni zadatak.</p>
+</header>
+<nav class="toc" aria-label="Sadržaj lekcije">
+<a href="#pojam">Pojam i ekvivalentnost</a>
+<a href="#osnovni">Osnovni tipovi</a>
+<a href="#razlomci">Razlomci</a>
+<a href="#svodjenje">Svođenje na linearnu</a>
+<a href="#primene">Primene</a>
+<a href="#apsolutna">Apsolutna vrednost</a>
+<a href="#vezba">Samostalna vežba</a>
+</nav>
+<section aria-labelledby="pojam">
+<h2 id="pojam">Jednačina, rešenje i ekvivalentnost</h2>
+<p>Jednačina je jednakost u kojoj se javlja nepoznata. U zapisu <span class="math">x + 5 = 21</span>, izraz <span class="math">x + 5</span> je leva strana, a <span class="math">21</span> desna. Rešenje je vrednost nepoznate za koju su obe strane jednake. Rešiti jednačinu znači naći <strong>sve</strong> takve vrednosti. U ovoj lekciji tražimo rešenja u skupu realnih brojeva, osim kada tekst zadatka određuje koje vrednosti imaju smisla.</p>
+<p><strong>Ekvivalentne jednačine</strong> imaju isti skup rešenja. Na primer, <span class="math">x + 5 = 21</span> i <span class="math">x = 16</span> su ekvivalentne. Pišemo <span class="math">x + 5 = 21 ⇔ x = 16</span>. Znak ⇔ znači da oba zapisa imaju ista rešenja.</p>
+<div class="card">
+<h3>Ekvivalentne transformacije</h3>
+<ul>
+<li>Na obe strane možeš dodati ili od obe strane oduzeti isti izraz, ako je on definisan za sve vrednosti koje u tom zadatku razmatraš.</li>
+<li>Obe strane možeš pomnožiti istim nenultim brojem ili podeliti istim nenultim brojem. Deljenje izrazom sa nepoznatom zahteva da se posebno razmotri kada je taj izraz nula.</li>
+<li>Na jednoj strani smeš zameniti izraz jednakim izrazom. Na primer, <span class="math">2(x + 3)</span> možeš zameniti sa <span class="math">2x + 6</span>.</li>
+</ul>
+<p>„Prebacivanje člana uz promenu znaka“ je skraćeni zapis za dodavanje ili oduzimanje tog člana na obe strane.</p>
+</div>
+</section>
+<section aria-labelledby="osnovni">
+<h2 id="osnovni">Osnovni tipovi</h2>
+<p>Linearna jednačina sa jednom nepoznatom može se zapisati u obliku <span class="math">ax + b = 0</span>, gde su <em>a</em> i <em>b</em> brojevi i <span class="math">a ≠ 0</span>. Pri sređivanju jednačine mogu se pojaviti i granični slučajevi u kojima se član uz x poništi.</p>
+<p>Cilj je da nepoznata ostane sama. Koristi suprotnu računsku operaciju od one koja je vezuje za ostale članove.</p>
+<div class="table-scroll">
+<table class="rules"><thead><tr><th scope="col">Jednačina</th><th scope="col">Operacija na obe strane</th><th scope="col">Rešenje</th></tr></thead>
+<tbody>
+<tr><th scope="row">x + 5 = 21</th><td>Oduzmi 5.</td><td>x = 16.</td></tr>
+<tr><th scope="row">x − 7 = 9</th><td>Dodaj 7.</td><td>x = 16.</td></tr>
+<tr><th scope="row">4x = 28</th><td>Podeli sa 4.</td><td>x = 7.</td></tr>
+<tr><th scope="row">x/3 = −4</th><td>Pomnoži sa 3.</td><td>x = −12.</td></tr>
+</tbody></table>
+</div>
+<div class="card"><h3>Nepoznata je na obe strane</h3>
+<p class="formula">2x + 3 = 7x − 8</p>
+<p>Oduzmi 2x sa obe strane i dobijaš 3 = 5x − 8. Dodaj 8, pa je 11 = 5x. Deljenjem sa 5 dobijaš <strong>x = 11/5</strong>.</p>
+<p><strong>Provera.</strong> Leva strana je 2 · (11/5) + 3 = 37/5, a desna 7 · (11/5) − 8 = 37/5.</p></div>
+<p><strong>Koliko rešenja može biti?</strong> Posle sređivanja dobijaš oblik <span class="math">ax = b</span>. Ako je a ≠ 0, postoji tačno jedno rešenje, x = b/a. Ako dobiješ 0 = 0, svaki realan broj je rešenje. Ako dobiješ netačnu jednakost kao što je 0 = 2, nema rešenja.</p>
+</section>
+<section aria-labelledby="razlomci">
+<h2 id="razlomci">Jednačine sa razlomcima</h2>
+<p>Kada su imenioci brojevi, pomnoži <strong>obe strane jednačine</strong> zajedničkim sadržaocem imenilaca. Ako postoji samo jedan imenilac, obično je najlakše pomnožiti njime. Kada ih ima više, koristi <strong>NZS</strong>, najmanji zajednički sadržalac. Množilac se primenjuje na svaki član, uključujući one bez razlomka.</p>
+<div class="card"><h3>Jedan imenilac</h3>
+<p class="formula">(2x − 3)/5 = 3 ⇔ 2x − 3 = 15 ⇔ 2x = 18 ⇔ x = 9.</p>
+<p>Prvi korak je množenje obe strane sa 5.</p></div>
+<div class="card"><h3>Različiti imenioci</h3>
+<p class="formula">(x − 1)/3 + (x + 2)/2 = 4.</p>
+<p>Pošto je NZS(3, 2) = 6, svaki član pomnoži sa 6. Dobijaš <span class="math">2(x − 1) + 3(x + 2) = 24</span>. Sačuvaj zagrade oko brojilaca dok ne razviješ proizvode.</p>
+<p class="formula">2x − 2 + 3x + 6 = 24 ⇔ 5x + 4 = 24 ⇔ 5x = 20 ⇔ x = 4.</p>
+<p><strong>Provera.</strong> (4 − 1)/3 + (4 + 2)/2 = 1 + 3 = 4.</p></div>
+</section>
+<section aria-labelledby="svodjenje">
+<h2 id="svodjenje">Jednačine koje se svode na linearne</h2>
+<p>Otvori zagrade i saberi slične članove. Nešto što na početku izgleda složenije može nakon sređivanja da se svede na <span class="math">ax = b</span>.</p>
+<div class="card"><h3>Minus ispred zagrade</h3>
+<p class="formula">−2(x − 3) + 5 = 3x + 1.</p>
+<p>Razvijanjem zagrade dobijaš −2x + 6 + 5 = 3x + 1, pa je 10 = 5x. Rešenje je <strong>x = 2</strong>.</p></div>
+<div class="card"><h3>Kvadratni članovi se poništavaju</h3>
+<p class="formula">(x + 2)² − x² = 16.</p>
+<p>Razvij kvadrat zbira. Dobijaš x² + 4x + 4 − x² = 16, pa ostaje 4x + 4 = 16. Zato je <strong>x = 3</strong>.</p></div>
+</section>
+<section aria-labelledby="primene">
+<h2 id="primene">Primene u tekstualnim zadacima</h2>
+<p>Označi šta je nepoznata i u kojim jedinicama se meri. Zatim prevedi uslov zadatka u jednačinu, reši je i proveri da li odgovor ima smisla u početnom tekstu.</p>
+<div class="card"><h3>Kupovina</h3>
+<p>Tri sveske iste cene i olovka od 60 dinara ukupno koštaju 420 dinara. Koliko košta jedna sveska?</p>
+<p>Ako je x cena sveske u dinarima, onda je 3x + 60 = 420, pa iz 3x = 360 sledi x = 120. <strong>Sveska košta 120 dinara.</strong> Provera: 3 · 120 + 60 = 420.</p></div>
+<div class="card"><h3>Obim pravougaonika</h3>
+<p>Obim pravougaonika je 46 cm, a duža stranica je za 5 cm duža od kraće. Nađi dužine stranica.</p>
+<p>Neka je x dužina kraće stranice u centimetrima. Duža je x + 5. Iz 2x + 2(x + 5) = 46 dobijaš 4x + 10 = 46, pa je x = 9. <strong>Stranice su 9 cm i 14 cm.</strong> Njihov obim je 2 · (9 + 14) = 46 cm.</p></div>
+</section>
+<section aria-labelledby="apsolutna">
+<h2 id="apsolutna">Dodatak · jednačine sa apsolutnom vrednošću</h2>
+<p>Apsolutna vrednost broja je njegovo rastojanje od nule. Jednačina <span class="math">|x − 3| = 4</span> traži brojeve na rastojanju 4 od broja 3.</p>
+<figure class="card plot"><img src="data:image/png;base64,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" alt="Na brojevnoj pravoj, −1 i 7 nalaze se po četiri jedinice od broja 3."><figcaption>Od broja 3 pomeri se četiri jedinice ulevo do −1 ili četiri udesno do 7.</figcaption></figure>
+<p>Kad je k &gt; 0, iz <span class="math">|u| = k</span> dobijaš dva slučaja, <span class="math">u = k</span> ili <span class="math">u = −k</span>. Ovde je x − 3 = 4 ili x − 3 = −4, pa je <strong>x ∈ {−1, 7}</strong>. Ako je k = 0, rešavaš samo u = 0. Ako je k &lt; 0, nema rešenja.</p>
+</section>
+<section aria-labelledby="vezba">
+<h2 id="vezba">Samostalna vežba</h2>
+<p>Zadaci 1–4 proveravaju osnovne tipove, 5–11 sređivanje jednačina, 12–13 primene, a 14–16 apsolutnu vrednost. Konačne odgovore otvori posle pokušaja.</p>
+<ol class="practice"><li>x + 9 = 14</li><li>x − 8 = −3</li><li>−4x = 28</li><li>x/6 = −2</li><li>3x − 4 = 5x + 7</li><li>−2(x − 4) + 3 = x + 5</li><li>(3x − 2)/4 = 7</li><li>(x − 1)/4 + (x + 2)/6 = 3</li><li>(x − 1)² − x² = −7</li><li>5(x − 1) = 5x + 2</li><li>3(x + 2) = 3x + 6</li><li>Zbir broja i njegovog trostrukog iznosa je 48. Odredi taj broj.</li><li>Pravougaonik ima obim 54 cm. Duža stranica je za 7 cm duža od kraće. Odredi dužine stranica.</li><li>|2x − 1| = 5</li><li>|x + 4| = 0</li><li>|x − 2| = −1</li></ol>
+<details><summary>Prikaži konačne odgovore</summary><ol><li>x = 5.</li><li>x = 5.</li><li>x = −7.</li><li>x = −12.</li><li>x = −11/2.</li><li>x = 2.</li><li>x = 10.</li><li>x = 7.</li><li>x = 4.</li><li>Nema rešenja.</li><li>Rešenje je svaki realan broj.</li><li>Traženi broj je 12.</li><li>Kraća stranica je 10 cm, duža 17 cm.</li><li>x ∈ {−2, 3}.</li><li>x = −4.</li><li>Nema rešenja.</li></ol></details>
+</section>
+</article></main>
+</body></html>
